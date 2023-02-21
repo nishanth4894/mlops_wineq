@@ -10,8 +10,8 @@ webapp_root = "webapp"
 static_dir = os.path.join(webapp_root, "static")
 template_dir = os.path.join(webapp_root, "templates")
 
-app = Flask(__name__, static_folder=static_dir,template_folder=template_dir)
-
+application = Flask(__name__, static_folder=static_dir,template_folder=template_dir)
+app = application
 def read_params(config_path):
     with open(config_path) as yaml_file:
         config = yaml.safe_load(yaml_file)
